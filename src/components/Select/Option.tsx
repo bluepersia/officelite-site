@@ -16,7 +16,7 @@ export default function Option({
 
   return (
     <p
-      onClick={() => setSelectIndex(index)}
+      onClick={() => !isCurrent && setSelectIndex(index)}
       className={
         styles.option +
         ' ' +
