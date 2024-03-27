@@ -7,6 +7,7 @@ import {
   isValidElement,
   cloneElement,
   Children,
+  useEffect,
 } from 'react';
 import styles from './Select.module.css';
 
@@ -20,7 +21,16 @@ export const SelectContext = createContext<SelectContextType>({
   setSelectIndex: () => {},
 });
 
-export default function Select({ children }: PropsWithChildren): JSX.Element {
+type Props = {
+  value: number;
+  onChange: (index: number) => void;
+};
+
+export default function Select({
+  value,
+  onChange,
+  children,
+}: PropsWithChildren<Props>): JSX.Element {
   const [selectIndex, setSelectIndex] = useState<number>(0);
   const [dropdown, setDropdown] = useState<boolean>(false);
 
@@ -42,6 +52,14 @@ export default function Select({ children }: PropsWithChildren): JSX.Element {
 
     return child;
   });
+
+  useEffect(() => {
+    onChange(selectIndex);
+  }, [selectIndex]);
+
+  useEffect(() => {
+    if (value > -1) setSelectIndex(value);
+  }, [value]);
 
   return (
     <SelectContext.Provider value={{ selectIndex, setSelectIndex }}>

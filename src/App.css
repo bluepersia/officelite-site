@@ -127,6 +127,7 @@ p {
   border-bottom: solid 1px rgba(116, 123, 149, 50%);
   color: var(--color-3);
   background:none;
+  width: 100%;
 }
 
 .textfield::placeholder 
