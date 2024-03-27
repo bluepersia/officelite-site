@@ -1,0 +1,164 @@
+.header {
+    padding: 2.875em 6.4% 55.8em;
+    background-image: url(../assets/img/home/bg-pattern-header.svg);
+    background-size: contain;
+    background-position: top -8em center;
+    background-repeat: no-repeat;
+    background-color: #F2F2F2;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5em;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero_content 
+{
+    order: 2
+}
+
+.hero_illustration {
+    order: 1;
+    width: 45.6%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4em;
+}
+
+.title {
+    composes: heading-2 from '../App.css';
+    color: var(--color-3);
+    margin-bottom: .6em;
+}
+
+.hero_body {
+    margin-bottom: 1.5em;
+}
+
+.hero_btn {
+    composes: btn from '../App.css';
+}
+
+.section1
+{
+    background-color: var(--color-4);
+    position: relative;
+    padding-top: 55em;
+    padding-left: 6.4%;
+    padding-right: 6.4%;
+    padding-bottom: 6.25em;
+}
+
+.section1::after
+{
+    content: '';
+    position: absolute;
+    width: 850px;
+    height: 850px;
+    bottom: 0;
+    left: 0px;
+    transform: translate(-27.5%);
+    background-image: url(../assets/img/home/bg-pattern-footer.svg);
+    
+    background-size: cover;
+    pointer-events: none;
+}
+
+.plans {
+    position: absolute;
+    top: 0px;
+    left:0px;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.plans::after
+{
+    content: '';
+    position: absolute;
+    left:-50%;
+    transform: translate(-7.4%);
+    top: 8em;
+    background: url(../assets/img/home/bg-pattern-pricing.svg);
+    width: 880px;
+    height: 880px;
+    pointer-events: none;
+}
+.plan {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 87.2%;
+    background-color: white;
+    padding: 2.5em 0;
+    text-align: center; 
+    border-radius: 12px;
+}
+
+.plan_title {
+    composes: heading-3 from '../App.css';
+    color: var(--color-3);
+    margin-bottom: 2em;
+}
+
+.plan_cost 
+{
+    composes: heading-1 from '../App.css';
+    color: var(--color-3);
+    margin-bottom: .14em;
+}
+
+.plan_users
+{
+    color: var(--color-3);
+}
+
+.plan_features
+{
+    list-style: none;
+    padding-left: 0;
+    margin-top: 3.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.plan_btn {
+    composes: btn from '../App.css';
+    margin-top: 2em;
+}
+
+.plan:nth-child(2)
+{
+    background-color: var(--color-1);
+    
+}
+.plan:nth-child(2) .plan_title, .plan:nth-child(2) .plan_cost, .plan:nth-child(2) .plan_users, .plan:nth-child(2) .plan_features
+{
+    color: white;
+}
+
+.plan:nth-child(2) .plan_features {
+    opacity: 75%;
+}
+
+.cta {
+    text-align: center;
+}
+.cta_btn
+{
+    composes: btn from '../App.css';
+    margin-top: 2.5em;
+}

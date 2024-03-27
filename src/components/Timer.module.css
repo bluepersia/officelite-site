@@ -1,0 +1,31 @@
+.container 
+{
+    text-align: center;
+    color: white;
+}
+.title {
+    composes: heading-4 from '../App.css';
+}
+
+
+.title .color {
+    color: var(--color-1);
+}
+
+.timer{ 
+    display: flex;
+    justify-content: space-between;
+    gap: 0.81em
+}
+
+.timer_num {
+    padding: .68em 1em;
+    width: 21.9%;
+    background-color: var(--color-3);;
+}
+
+.timer_num_label {
+  opacity: 50%;
+}
+
+
