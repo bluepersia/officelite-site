@@ -9,7 +9,7 @@ type FormData = {
   name: string;
   email: string;
   package: number;
-  phone: number | undefined;
+  phone: string;
   company: string;
 };
 
