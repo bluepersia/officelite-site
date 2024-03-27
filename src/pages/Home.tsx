@@ -20,7 +20,7 @@ export default function Home(): JSX.Element {
               projects. Officelite is the new collaboration platform built with
               an intuitive interface to improve productivity.
             </p>
-            <Link to='cta' className={styles.hero_btn + ' btn-1'}>
+            <Link to='sign-up' className={styles.hero_btn + ' btn-1'}>
               Get Started
             </Link>
           </div>
@@ -48,7 +48,7 @@ export default function Home(): JSX.Element {
                   Great security and support
                 </li>
               </ul>
-              <Link to='cta' className={styles.plan_btn + ' btn-2'}>
+              <Link to='sign-up' className={styles.plan_btn + ' btn-2'}>
                 Try for Free
               </Link>
             </div>
@@ -66,7 +66,7 @@ export default function Home(): JSX.Element {
                   More control and insights
                 </li>
               </ul>
-              <Link to='cta' className={styles.plan_btn + ' btn-3'}>
+              <Link to='sign-up' className={styles.plan_btn + ' btn-3'}>
                 Try for Free
               </Link>
             </div>
@@ -80,7 +80,7 @@ export default function Home(): JSX.Element {
                 <li className={styles.plan_feature}>100 GB storage</li>
                 <li className={styles.plan_feature}>VIP support</li>
               </ul>
-              <Link to='cta' className={styles.plan_btn + ' btn-2'}>
+              <Link to='sign-up' className={styles.plan_btn + ' btn-2'}>
                 Try for Free
               </Link>
             </div>
@@ -88,7 +88,7 @@ export default function Home(): JSX.Element {
 
           <div className={styles.cta}>
             <Timer mode={TimerMode.Dark} />
-            <Link to='cta' className={styles.cta_btn + ' btn-1'}>
+            <Link to='sign-up' className={styles.cta_btn + ' btn-1'}>
               Get Started
             </Link>
           </div>
