@@ -1,0 +1,53 @@
+.option {
+    padding: 1em 0; 
+    font-weight: bold;
+    color: var(--color-3);
+    position: relative;
+}
+
+.option:not(:last-child){
+    border-bottom: 1px solid rgba(116, 123, 194, 25%);
+}
+
+.option span 
+{
+    margin-left: .43em;
+    font-weight: normal;
+    opacity: 40%;
+}
+
+.option.selected::after
+{
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+    background-image: url(../../assets/img/sign-up/icon-check.svg);
+    background-size: cover;
+    width: 0.812em;
+    height: 0.625em;
+    position: absolute;
+}
+
+.option.current::after
+{
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+    background-image: url(../../assets/img/sign-up/icon-arrow-down.svg);
+    background-size: cover;
+    width: 0.812em;
+    height: 0.5em;
+    position: absolute;
+}
+
+.option.current {
+    font-size: 1rem;
+  font-family: inherit;
+  padding: 1em;
+  border:none;
+  border-bottom: solid 1px rgba(116, 123, 149, 50%);
+  color: var(--color-3);
+  background:none;
+}

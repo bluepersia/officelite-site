@@ -1,42 +1,162 @@
+:root 
+{
+  --color-1: hsl(228,100%,66%);
+  --color-2: hsl(228, 100%, 75%);
+  --color-3:hsl(228, 22%, 26%);
+  --color-4:hsl(229, 22%, 19%);
+  --color-5: hsl(227, 13%, 52%);
+  --color-6:hsl(0, 83%, 65%);
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100vw;
+  min-height: 100vh;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  color: var(--color-5);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+* {
+  margin:0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.heading-1 
+{
+  font-size: 3.5rem;
+  line-height: 1.142;
 }
 
-.card {
-  padding: 2em;
+.heading-2 
+{
+  font-size: 2.5rem;
+  line-height: 1.2;
 }
 
-.read-the-docs {
-  color: #888;
+.heading-3 
+{
+  font-size: 1.25rem;
+  line-height: 1.4;
 }
+
+.heading-4
+{
+  font-size: 1rem;
+  line-height: 3;
+  text-transform: uppercase;
+  letter-spacing: 0.31em;
+}
+
+.body-1
+{
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
+
+
+.body-2 
+{
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
+
+
+.btn {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  padding: .875em 2.56em;
+  border:none;
+  border-radius: 2.5em;
+  transition: background-color 300ms, color 300ms;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.btn-1
+{
+  background-color: var(--color-1);
+  color: white;
+}
+
+.btn-1:hover {
+  background-color: var(--color-2);
+}
+
+.btn-2
+{
+  background-color: rgba(81, 117, 255,15%);
+  color: var(--color-1);
+}
+
+.btn-2:hover 
+{
+  background-color: rgba(81, 117, 255,25%);
+}
+
+.btn-3 
+{
+  background-color: white;
+  color: var(--color-1)
+}
+
+.btn-3:hover
+{
+  color: var(--color-2);
+}
+
+
+
+
+.textfield
+{
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 1em;
+  border:none;
+  border-bottom: solid 1px rgba(116, 123, 149, 50%);
+  color: var(--color-3);
+  background:none;
+}
+
+.textfield::placeholder 
+{
+  color: var(--color-5);
+  opacity: 50%;
+}
+
+.textfield:focus 
+{
+  outline: none;
+}
+
+.textfield_wrapper{ 
+  position: relative;
+  width: fit-content;
+}
+
+.textfield_wrapper.invalid .textfield
+{
+  color: var(--color-6);
+  border-bottom-color: var(--color-6);
+}
+
+.textfield_img-error {
+  display: none;
+}
+
+.textfield_wrapper.invalid .textfield_img-error
+{
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: .625em;
+  transform: translateY(-50%);
+}
+
+
