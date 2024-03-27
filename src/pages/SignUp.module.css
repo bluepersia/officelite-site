@@ -67,3 +67,22 @@
     width: 100%;
 }
 
+
+
+
+@media (min-width: 768px)
+{
+    .signup {
+        background-image: none;
+    }
+    .sectionA {
+        padding: 4.5em 5% 22em;
+    }
+
+    .content {
+        max-width: 572px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
