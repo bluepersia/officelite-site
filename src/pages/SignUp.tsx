@@ -34,7 +34,7 @@ export default function SignUp(): JSX.Element {
     name: '',
     email: '',
     package: 0,
-    phone: undefined,
+    phone: '',
     company: '',
   });
 

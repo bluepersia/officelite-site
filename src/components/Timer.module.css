@@ -59,3 +59,14 @@
         composes: heading-1 from '../App.css';
     }
 }
+
+@media(min-width: 1440px)
+{
+    .container {
+        margin-left: 0;
+    }
+    .title
+     {
+        text-align: left;
+     }
+}
