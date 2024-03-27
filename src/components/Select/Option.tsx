@@ -10,10 +10,15 @@ export default function Option({
   children,
   index = 0,
 }: PropsWithChildren<Props>): JSX.Element {
-  const { setSelectIndex } = useContext(SelectContext);
+  const { selectIndex, setSelectIndex } = useContext(SelectContext);
 
   return (
-    <p onClick={() => setSelectIndex(index)} className={styles.option}>
+    <p
+      onClick={() => setSelectIndex(index)}
+      className={
+        styles.option + ' ' + (selectIndex === index && styles.selected)
+      }
+    >
       {children}
     </p>
   );

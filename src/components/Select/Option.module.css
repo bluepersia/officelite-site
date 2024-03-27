@@ -2,6 +2,7 @@
     padding: 1em 0; 
     font-weight: bold;
     color: var(--color-3);
+    position: relative;
 }
 
 .option:not(:last-child){
@@ -13,4 +14,17 @@
     margin-left: .43em;
     font-weight: normal;
     opacity: 40%;
+}
+
+.option.selected::after
+{
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+    background-image: url(../../assets/img/sign-up/icon-check.svg);
+    background-size: cover;
+    width: 0.812em;
+    height: 0.625em;
+    position: absolute;
 }
