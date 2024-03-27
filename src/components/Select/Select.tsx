@@ -16,26 +16,29 @@ type SelectContextType = {
 };
 
 export const SelectContext = createContext<SelectContextType>({
-  selectIndex: -1,
+  selectIndex: 0,
   setSelectIndex: () => {},
 });
-type Props = {
-  options: string[];
-  placeholder?: string;
-};
 
-export default function Select({
-  children,
-  options,
-  placeholder = '',
-}: PropsWithChildren<Props>): JSX.Element {
-  const [selectIndex, setSelectIndex] = useState<number>(-1);
+export default function Select({ children }: PropsWithChildren): JSX.Element {
+  const [selectIndex, setSelectIndex] = useState<number>(0);
   const [dropdown, setDropdown] = useState<boolean>(false);
 
-  const childrenWithProps = Children.map(children, (child, index) => {
+  let dropdownChildren;
+
+  if (dropdown)
+    dropdownChildren = Children.map(children, (child, index) => {
+      if (isValidElement(child))
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        return cloneElement(child as any, { index });
+
+      return child;
+    });
+
+  const currentChild = Children.map(children, (child) => {
     if (isValidElement(child))
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      return cloneElement(child as any, { index });
+      return cloneElement(child as any, { isCurrent: true });
 
     return child;
   });
@@ -43,11 +46,9 @@ export default function Select({
   return (
     <SelectContext.Provider value={{ selectIndex, setSelectIndex }}>
       <div onClick={() => setDropdown((val) => !val)} className={styles.select}>
-        <p className={styles.placeholder}>
-          {selectIndex == -1 ? placeholder : options[selectIndex]}
-        </p>
+        {currentChild && currentChild[selectIndex]}
         {dropdown && (
-          <div className={styles.childrenContainer}>{childrenWithProps}</div>
+          <div className={styles.childrenContainer}>{dropdownChildren}</div>
         )}
       </div>
     </SelectContext.Provider>

@@ -73,6 +73,8 @@ body {
   border:none;
   border-radius: 2.5em;
   transition: background-color 300ms, color 300ms;
+  text-decoration: none;
+  color: inherit;
 }
 
 

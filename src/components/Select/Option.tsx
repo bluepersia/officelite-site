@@ -4,11 +4,13 @@ import { SelectContext } from './Select';
 
 type Props = {
   index?: number;
+  isCurrent?: boolean;
 };
 
 export default function Option({
   children,
   index = 0,
+  isCurrent = false,
 }: PropsWithChildren<Props>): JSX.Element {
   const { selectIndex, setSelectIndex } = useContext(SelectContext);
 
@@ -16,7 +18,9 @@ export default function Option({
     <p
       onClick={() => setSelectIndex(index)}
       className={
-        styles.option + ' ' + (selectIndex === index && styles.selected)
+        styles.option +
+        ' ' +
+        (isCurrent ? styles.current : selectIndex === index && styles.selected)
       }
     >
       {children}

@@ -4,10 +4,7 @@
     font-weight: bold;
 }
 
-.placeholder 
-{
-    composes: textfield from '../../App.css';
-}
+
 
 .childrenContainer {
     padding: 1.5em 2em;

@@ -28,3 +28,26 @@
     height: 0.625em;
     position: absolute;
 }
+
+.option.current::after
+{
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+    background-image: url(../../assets/img/sign-up/icon-arrow-down.svg);
+    background-size: cover;
+    width: 0.812em;
+    height: 0.5em;
+    position: absolute;
+}
+
+.option.current {
+    font-size: 1rem;
+  font-family: inherit;
+  padding: 1em;
+  border:none;
+  border-bottom: solid 1px rgba(116, 123, 149, 50%);
+  color: var(--color-3);
+  background:none;
+}
