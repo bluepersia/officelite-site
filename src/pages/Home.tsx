@@ -36,9 +36,11 @@ export default function Home(): JSX.Element {
         <section className={styles.section1}>
           <div className={styles.plans}>
             <div className={styles.plan}>
-              <h3 className={styles.plan_title}>Basic</h3>
-              <h1 className={styles.plan_cost}>Free</h1>
-              <p className={styles.plan_users}>Up to 5 users for free</p>
+              <div className={styles.plan_content}>
+                <h3 className={styles.plan_title}>Basic</h3>
+                <h1 className={styles.plan_cost}>Free</h1>
+                <p className={styles.plan_users}>Up to 5 users for free</p>
+              </div>
               <ul className={styles.plan_features}>
                 <li className={styles.plan_feature}>
                   Basic document collaboration
@@ -54,9 +56,11 @@ export default function Home(): JSX.Element {
             </div>
 
             <div className={styles.plan}>
-              <h3 className={styles.plan_title}>Pro</h3>
-              <h1 className={styles.plan_cost}>$9.99</h1>
-              <p className={styles.plan_users}>Per user, billed monthly</p>
+              <div className={styles.plan_content}>
+                <h3 className={styles.plan_title}>Pro</h3>
+                <h1 className={styles.plan_cost}>$9.99</h1>
+                <p className={styles.plan_users}>Per user, billed monthly</p>
+              </div>
               <ul className={styles.plan_features}>
                 <li className={styles.plan_feature}>
                   All essential integrations
@@ -72,9 +76,11 @@ export default function Home(): JSX.Element {
             </div>
 
             <div className={styles.plan}>
-              <h3 className={styles.plan_title}>Ultimate</h3>
-              <h1 className={styles.plan_cost}>$19.99</h1>
-              <p className={styles.plan_users}>Per user, billed monthly</p>
+              <div className={styles.plan_content}>
+                <h3 className={styles.plan_title}>Ultimate</h3>
+                <h1 className={styles.plan_cost}>$19.99</h1>
+                <p className={styles.plan_users}>Per user, billed monthly</p>
+              </div>
               <ul className={styles.plan_features}>
                 <li className={styles.plan_feature}>Robust work management</li>
                 <li className={styles.plan_feature}>100 GB storage</li>

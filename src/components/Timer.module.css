@@ -2,6 +2,9 @@
 {
     text-align: center;
     color: white;
+    max-width: 448px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .title {
     composes: heading-4 from '../App.css';
@@ -18,7 +21,7 @@
 .timer{ 
     display: flex;
     justify-content: space-between;
-    gap: 0.81em
+    gap: 0.81eml
 }
 
 .timer_num {
@@ -32,9 +35,27 @@
     background-color:rgba(81, 117, 255, 10%);
 }
 
+.timer_num_value {
+    font-size: 2rem;
+}
+
 .timer_num_label {
   opacity: 50%;
+  color:White;
+}
+
+.container.light .timer_num_label {
+
   color: var(--color-3);
 }
 
 
+
+
+@media (min-width: 768px)
+{
+    .timer_num_value 
+    {
+        composes: heading-1 from '../App.css';
+    }
+}

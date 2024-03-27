@@ -21,7 +21,7 @@ type FormErrors = {
 };
 function isPhoneNumber(str: string): boolean {
   return Boolean(
-    str.match(/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/)
+    str.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)
   );
 }
 
