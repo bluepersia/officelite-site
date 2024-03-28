@@ -21,12 +21,12 @@ type FormErrors = {
 };
 function isPhoneNumber(str: string): boolean {
   return Boolean(
-    str.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)
+    str.match(/^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/)
   );
 }
 
 function isEmail(str: string): boolean {
-  return Boolean(str.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/));
+  return Boolean(str.match(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/));
 }
 
 export default function SignUp(): JSX.Element {
@@ -57,25 +57,25 @@ export default function SignUp(): JSX.Element {
   function handleFormSubmit(e: FormEvent): void {
     e.preventDefault();
 
-    let errors: FormErrors = {
+    const errors: FormErrors = {
       name: '',
       email: '',
       phone: '',
       company: '',
     };
 
-    if (!formData.name) errors.name = 'Is required';
+    if (!formData.name) errors.name = 'Required';
     else if (formData.name.length < 2)
       errors.name = 'Must be at least 2 characters';
 
-    if (!formData.email) errors.email = 'Is required';
+    if (!formData.email) errors.email = 'Required';
     else if (!isEmail(formData.email)) errors.email = 'Must be a valid email';
 
-    if (!formData.phone) errors.phone = 'Is required';
+    if (!formData.phone) errors.phone = 'Required';
     else if (!isPhoneNumber(formData.phone.toString()))
       errors.phone = 'Must be a valid phone number';
 
-    if (!formData.company) errors.company = 'Is required';
+    if (!formData.company) errors.company = 'Required';
 
     setFormErrors(errors);
 
