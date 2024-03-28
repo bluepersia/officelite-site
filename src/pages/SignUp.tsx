@@ -4,6 +4,7 @@ import Timer, { TimerMode } from '../components/Timer';
 import Select from '../components/Select/Select';
 import Option from '../components/Select/Option';
 import { FormEvent, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 type FormData = {
   name: string;
@@ -95,7 +96,9 @@ export default function SignUp(): JSX.Element {
     <div className={styles.signup}>
       <div className={styles.sectionA}>
         <header className={styles.header}>
-          <img src={imgLogo} className={styles.logo} alt='Officelite logo' />
+          <Link to='/'>
+            <img src={imgLogo} className={styles.logo} alt='Officelite logo' />
+          </Link>
         </header>
         <div className={styles.content}>
           <h1 className={styles.title}>Work smarter. Save time.</h1>

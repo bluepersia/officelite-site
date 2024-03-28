@@ -8,7 +8,9 @@ export default function Home(): JSX.Element {
   return (
     <div className={styles.home}>
       <header className={styles.header}>
-        <img src={imgLogo} className={styles.logo} alt='Officelite logo' />
+        <Link to='/'>
+          <img src={imgLogo} className={styles.logo} alt='Officelite logo' />
+        </Link>
 
         <div className={styles.hero}>
           <div className={styles.hero_content}>
